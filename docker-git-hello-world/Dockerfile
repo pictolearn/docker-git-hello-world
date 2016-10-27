@@ -13,4 +13,5 @@ RUN apt-get update && apt-get install -y oracle-java8-installer maven
 ADD . /usr/local/docker-git-hello-world
 RUN cd /usr/local/docker-git-hello-world && mvn assembly:assembly
 
-CMD ["java", "-cp", "docker-git-hello-world-0.0.1-SNAPSHOT.jar", "org.pictolearn.docker.HelloWorldPing"]
+#CMD ["ping", "127.0.0.1", "-c", "30"]
+CMD ["java", "-cp", "docker-git-hello-world-0.0.1-SNAPSHOT-jar-with-dependencies.jar", "org.pictolearn.docker.HelloWorldPing"]
